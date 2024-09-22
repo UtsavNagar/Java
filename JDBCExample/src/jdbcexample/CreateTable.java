@@ -9,7 +9,8 @@ public class CreateTable {
         
         Statement stmt = con.createStatement();
         
-        int n = stmt.executeUpdate("CREATE TABLE dummy (FIRSTCOL CHAR, SECONDCOL CHAR)") ;
+        int n = stmt.executeUpdate("CREATE TABLE emp (eno INTEGER PRIMARY KEY,ename VARCHAR(10),sal INTEGER,desg VARCHAR(10),pcode VARCHAR(5))") ;
+        n = stmt.executeUpdate("CREATE TABLE projects (pcode VARCHAR(5) PRIMARY KEY,ptitle VARCHAR(10),cname VARCHAR(10))") ;
         
         System.out.println();
         con.close();
