@@ -9,14 +9,16 @@ public class DataProvider extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        String cntry = req.getParameter("t1");
+        String country = req.getParameter("country");
+        String userName = req.getParameter("user-name");
+        String donations[] = req.getParameterValues("donation");
         
         int ttl = 0,
             active=0,
             death=0,
             recover=0;
         
-        switch(cntry){
+        switch(country){
             case "india":
                         ttl = 100;
                         active=200;
@@ -38,18 +40,16 @@ public class DataProvider extends HttpServlet {
         }
         
          PrintWriter out = res.getWriter();
-//         out.println("Total :"+ttl);
-//         out.println("active :"+active);
-//         out.println("death :"+death);
-//         out.println("recover :"+recover);
 
-        out.println(" <html> <body> <h1> Covid - 19 Information </h1> <hr>"
+        out.println(" <html> <body> <h1> Covid - 19 Information for " + userName + " </h1> <hr>"
                 + "<h2> Total :"+ttl+"</h2> <br>"
                 + "<h2> active :"+active+"</h2> <br>"
                 + "<h2> death :"+death+"</h2> <br>"
-                + "<h2> recover :"+recover+"</h2> <br>"
-                + "<marquee> Stay home, Be safe   </marquee>"
-                + "</body> </html> ");
+                + "<h2> recover :"+recover+"</h2> <br>");
+                for(String donation : donations){
+                    out.println(donation);
+                }
+        out.println("</body> </html> ");
          
          out.close();
     }

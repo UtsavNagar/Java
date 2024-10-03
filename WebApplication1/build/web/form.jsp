@@ -7,8 +7,21 @@
     </head>
     <body>
         <form method="post" action="DataProvider">
-            Country name : <input name="t1" type="text" placeholder="ex.: India">
-            <button type="submit"> Submit</button>
+            <pre>
+                Country name : <select name="country">
+                                <option value="India">india</option>
+                                <option value="pakistan">pakistan</option>
+                                <option value="uk">uk</option>
+                               </select>
+                Donation : <select name="donation" multiple="multiple" required>
+                                <option value="mask">mask</option>
+                                <option value="ppe">ppe</option>
+                                <option value="vaccine">vaccine</option>
+                                <option value="vaccine">vaccine</option>
+                             </select>
+                User name : <input name="user-name" type="text" placeholder="ex.: Utsav">
+                            <button type="submit"> Submit</button>
+            </pre>
         </form>
     </body>
 </html>
