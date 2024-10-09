@@ -4,9 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/home/utsav/Desktop/NetBeansProjects/WebApplication1/web/registration.jsp</file>
+            <file>file:/home/utsav/Desktop/NetBeansProjects/WebApplication1/web/userDashboard.jsp</file>
             <file>file:/home/utsav/Desktop/NetBeansProjects/WebApplication1/web/index.jsp</file>
+            <file>file:/home/utsav/Desktop/NetBeansProjects/WebApplication1/web/stateAdminDashboard.jsp</file>
             <file>file:/home/utsav/Desktop/NetBeansProjects/WebApplication1/src/java/DataProvider.java</file>
             <file>file:/home/utsav/Desktop/NetBeansProjects/WebApplication1/src/java/myPkg/Utility.java</file>
+            <file>file:/home/utsav/Desktop/NetBeansProjects/WebApplication1/web/superAdminDashboard.jsp</file>
             <file>file:/home/utsav/Desktop/NetBeansProjects/WebApplication1/web/form.jsp</file>
             <file>file:/home/utsav/Desktop/NetBeansProjects/WebApplication1/src/java/VerifyUser.java</file>
             <file>file:/home/utsav/Desktop/NetBeansProjects/WebApplication1/src/java/RegistrationServlet.java</file>

@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletConfig;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -57,19 +58,45 @@ public class VerifyUser extends HttpServlet {
                 
                 boolean found = rs.next();
                 if(found){
-                    out.println("Wellcom User");
+                    response.sendRedirect("userDashboard.jsp");
                 }else{
-                    out.println("Invalid Data");
+                    out.println("<html><body>");
+                    out.println("<h2>Invalid User Account</h2>");
+                    out.println("<a href=index.jsp >Try Again</a>");
+                    out.println("</body></html>");
                 }
             }catch(Exception e){
                 out.println(e);
             }
         }else if(userType.equals("state-admin")){
-            out.println("state-admin!");
-        
+            try{
+                ps1.setString(1, email);
+                ps1.setString(2, password);
+                ResultSet rs = ps1.executeQuery();
+                
+                boolean found = rs.next();
+                if(found){
+                    response.sendRedirect("stateAdminDashboard.jsp");
+                }else{
+                    out.println("<html><body>");
+                    out.println("<h2>Invalid User Account</h2>");
+                    out.println("<a href=index.jsp >Try Again</a>");
+                    out.println("</body></html>");
+                }
+            }catch(Exception e){
+                out.println(e);
+            }
         }else if(userType.equals("admin")){
-            out.println("admin");
-            
+            if(email.equals("simsim") && password.equals("hiUtsav")){            
+                //response.sendRedirect("superAdminDashboard.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("superAdminDashboard.jsp");
+                rd.forward(request, response);
+            }else{
+                out.println("<html><body>");
+                out.println("<h2>Invalid User Account</h2>");
+                out.println("<a href=index.jsp >Try Again</a>");
+                out.println("</body></html>");
+            }
         }
         
         out.close();           
