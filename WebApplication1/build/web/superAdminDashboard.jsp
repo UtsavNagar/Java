@@ -7,7 +7,13 @@
         <h1>Super Admin Dashboard</h1>
         <div>
             <hr>
-            <h3>All links</h3>
+            <pre>
+                <a href="state-account.jsp">Create-state-account</a>
+                <a href="">View-state-accounts</a>
+                <a href="">Create-user-accounts</a>
+                <a href="">View-all-state-data</a>
+                <a href="">Logout</a>
+            </pre>
             <hr>
         </div>
     </body>
