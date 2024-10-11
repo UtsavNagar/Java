@@ -18,16 +18,15 @@ import java.sql.ResultSet;
 public class VerifyUser extends HttpServlet {
      
     private Connection con;
-    private PreparedStatement ps1;
+    private PreparedStatement ps1,ps2;
     
     @Override
     public void init(ServletConfig config) throws ServletException {
         try{
             con = myPkg.Utility.connectDB();
 
-            String sql = "SELECT * FROM users WHERE email=? AND password=?";
-
-            ps1 = con.prepareStatement(sql);
+            ps1 = con.prepareStatement("SELECT * FROM users WHERE email=? AND password=?");
+            ps2 = con.prepareStatement("SELECT * FROM stateAdmin WHERE userid=? AND password=?");
         }catch(Exception e){
             e.printStackTrace();
         }
@@ -46,13 +45,13 @@ public class VerifyUser extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         
-        String email = request.getParameter("email");
+        String uid = request.getParameter("email");
         String password = request.getParameter("password");
         String userType = request.getParameter("user-type");
         
         if(userType.equals("user")){
             try{
-                ps1.setString(1, email);
+                ps1.setString(1, uid);
                 ps1.setString(2, password);
                 ResultSet rs = ps1.executeQuery();
                 
@@ -70,13 +69,42 @@ public class VerifyUser extends HttpServlet {
             }
         }else if(userType.equals("state-admin")){
             try{
-                ps1.setString(1, email);
-                ps1.setString(2, password);
-                ResultSet rs = ps1.executeQuery();
+                ps2.setString(1, uid);
+                ps2.setString(2, password);
+                ResultSet rs = ps2.executeQuery();
                 
                 boolean found = rs.next();
                 if(found){
-                    response.sendRedirect("stateAdminDashboard.jsp");
+                    String status = rs.getString("status");
+                    String userid = rs.getString("userid");
+                    if(status.equals("disabled")){
+                        out.println("<html>");                        
+                        out.println("<body>");
+                        out.println("<h1>profile complition form</h1>");
+                        out.println("<form action=UpdateStateAdminProfile method=POST>");                        
+                        // userid, password , uname, email , address , mobile
+                        out.println("<pre>");
+                        out.println("userid     : <input name=userid value="+userid+">");
+                        
+                        out.println("Password   : <input type=password name=password>");
+                        
+                        out.println("Username   : <input name=uname>");
+                        
+                        out.println("Email      : <input type=email name=email>");
+                        
+                        out.println("Address    : <input name=address>");
+
+                        out.println("Mobile     : <input name=mobile>");
+
+                        out.println("             <input type=submit value=Update>");
+
+                        out.println("</pre>");
+                        out.println("</form>");                        
+                        out.println("</body>");
+                        out.println("</html>");
+                    }else{                
+                        response.sendRedirect("stateAdminDashboard.jsp");
+                    }
                 }else{
                     out.println("<html><body>");
                     out.println("<h2>Invalid User Account</h2>");
@@ -87,7 +115,7 @@ public class VerifyUser extends HttpServlet {
                 out.println(e);
             }
         }else if(userType.equals("admin")){
-            if(email.equals("simsim") && password.equals("hiUtsav")){            
+            if(uid.equals("simsim") && password.equals("hiUtsav")){            
                 //response.sendRedirect("superAdminDashboard.jsp");
                 RequestDispatcher rd = request.getRequestDispatcher("superAdminDashboard.jsp");
                 rd.forward(request, response);
