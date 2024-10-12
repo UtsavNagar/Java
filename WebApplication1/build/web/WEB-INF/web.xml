@@ -24,6 +24,10 @@
         <servlet-name>UpdateStateAdminProfile</servlet-name>
         <servlet-class>UpdateStateAdminProfile</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>saveStateInfo</servlet-name>
+        <servlet-class>saveStateInfo</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>DataProvider</servlet-name>
         <url-pattern>/DataProvider</url-pattern>
@@ -47,5 +51,9 @@
     <servlet-mapping>
         <servlet-name>UpdateStateAdminProfile</servlet-name>
         <url-pattern>/UpdateStateAdminProfile</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>saveStateInfo</servlet-name>
+        <url-pattern>/saveStateInfo</url-pattern>
     </servlet-mapping>
 </web-app>
