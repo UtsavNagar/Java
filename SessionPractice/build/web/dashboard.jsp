@@ -1,4 +1,9 @@
-
+<%
+    String userid = (String) session.getAttribute("userid");
+    if(userid == null){
+        response.sendRedirect("index.jsp");
+    }
+%>
 <html>
     <body>
         <h1>User Dashboard</h1>
