@@ -20,6 +20,10 @@
         <servlet-name>DeathServlet</servlet-name>
         <servlet-class>DeathServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>LogoutServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>VerifyUser</servlet-name>
         <url-pattern>/VerifyUser</url-pattern>
@@ -39,5 +43,9 @@
     <servlet-mapping>
         <servlet-name>DeathServlet</servlet-name>
         <url-pattern>/DeathServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
     </servlet-mapping>
 </web-app>

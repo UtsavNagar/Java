@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 
+import jakarta.servlet.ServletContext;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -29,6 +30,15 @@ public class VerifyUser extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        
+        
+        // set data in context object 
+        // 1 :- create an instance of context object
+        ServletContext cntx = getServletContext();
+        
+        // 2 :- set data using setAttribute
+        cntx.setAttribute("appName", "Utsav's App");
+        
         PrintWriter out = response.getWriter();
         
         String userid = request.getParameter("userid");
