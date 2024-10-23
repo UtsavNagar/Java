@@ -1,3 +1,9 @@
+<%
+    String userid = (String) session.getAttribute("userid");
+    if(userid == null){
+        response.sendRedirect("index.jsp");
+    }
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -10,9 +16,9 @@
             <pre>
             <a href="saveStateInfo.jsp">Add-info-for-today</a>     
             <a href="">Update-info</a>
-            <a href="">View-info-for-own-state</a>       
-            <a href="">View-info-for-all-state</a>
-            <a href="">Log-out</a>
+            <a href="StateDataServlet">View-info-for-own-state</a>       
+            <a href="DataForAllState">View-info-for-all-state</a>
+            <a href="EndSession">Log-out</a>
             </pre>
             <hr>
         </div>

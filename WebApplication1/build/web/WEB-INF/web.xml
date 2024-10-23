@@ -28,6 +28,18 @@
         <servlet-name>saveStateInfo</servlet-name>
         <servlet-class>saveStateInfo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EndSession</servlet-name>
+        <servlet-class>EndSession</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>StateDataServlet</servlet-name>
+        <servlet-class>StateDataServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DataForAllState</servlet-name>
+        <servlet-class>DataForAllState</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>DataProvider</servlet-name>
         <url-pattern>/DataProvider</url-pattern>
@@ -55,5 +67,17 @@
     <servlet-mapping>
         <servlet-name>saveStateInfo</servlet-name>
         <url-pattern>/saveStateInfo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EndSession</servlet-name>
+        <url-pattern>/EndSession</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StateDataServlet</servlet-name>
+        <url-pattern>/StateDataServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DataForAllState</servlet-name>
+        <url-pattern>/DataForAllState</url-pattern>
     </servlet-mapping>
 </web-app>

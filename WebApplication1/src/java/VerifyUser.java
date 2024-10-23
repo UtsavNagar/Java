@@ -11,6 +11,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -31,6 +32,8 @@ public class VerifyUser extends HttpServlet {
             e.printStackTrace();
         }
     }
+    
+    HttpSession session;
 
     @Override
     public void destroy() {
@@ -102,7 +105,12 @@ public class VerifyUser extends HttpServlet {
                         out.println("</form>");                        
                         out.println("</body>");
                         out.println("</html>");
-                    }else{                
+                    }else{ 
+                        // storing id and state in session object
+                         session = request.getSession();
+                         session.setAttribute("userid", userid);
+                         session.setAttribute("sname", rs.getString("sname"));
+                         
                         response.sendRedirect("stateAdminDashboard.jsp");
                     }
                 }else{
@@ -117,6 +125,9 @@ public class VerifyUser extends HttpServlet {
         }else if(userType.equals("admin")){
             if(uid.equals("simsim") && password.equals("hiUtsav")){            
                 //response.sendRedirect("superAdminDashboard.jsp");
+                session = request.getSession();
+                session.setAttribute("userid", "superAdmin");
+                
                 RequestDispatcher rd = request.getRequestDispatcher("superAdminDashboard.jsp");
                 rd.forward(request, response);
             }else{

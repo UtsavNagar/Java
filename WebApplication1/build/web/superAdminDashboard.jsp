@@ -1,3 +1,9 @@
+<%
+    String userid = (String) session.getAttribute("userid");
+    if(userid == null){
+        response.sendRedirect("index.jsp");
+    }
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -12,7 +18,7 @@
                 <a href="">View-state-accounts</a>
                 <a href="">Create-user-accounts</a>
                 <a href="">View-all-state-data</a>
-                <a href="">Logout</a>
+                <a href="processRequest">Logout</a>
             </pre>
             <hr>
         </div>

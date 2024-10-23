@@ -39,7 +39,7 @@ public class StateAccountCreationServlet extends HttpServlet {
 
                 out.println("<html>");
                 out.println("<body>");
-                out.println("Registered successfully! <a href=state-admin.jsp >Add more</a>");
+                out.println("Registered successfully! <a href=state-account.jsp >Add more</a>");
                 out.println("</body>");
                 out.println("</html>");
             } catch (Exception e) {

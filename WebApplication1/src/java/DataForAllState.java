@@ -13,65 +13,23 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  *
  * @author utsav
  */
-public class saveStateInfo extends HttpServlet {
-
+public class DataForAllState extends HttpServlet {
     private Connection con;
     private PreparedStatement ps;
     
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-            
-//        String state = request.getParameter("state");
-//        String userid = request.getParameter("userid");
-
-        // reading data from session object 
-        HttpSession session = request.getSession();
-        String state = (String) session.getAttribute("sname");
-        String userid = (String) session.getAttribute("userid");
-        
-        int active = Integer.parseInt(request.getParameter("active"));
-        int total = Integer.parseInt(request.getParameter("total"));
-        int deaths = Integer.parseInt(request.getParameter("deaths"));
-        
-        java.util.Date dt = new java.util.Date();
-        long val = dt.getTime();
-        java.sql.Date idate = new java.sql.Date(val );
-        
-        
-        PrintWriter out = response.getWriter(); 
-        
-        try{
-            
-            ps.setString(1, state);
-            ps.setInt(2, total);
-            ps.setInt(3, active);
-            ps.setInt(4, deaths);
-            ps.setString(5, userid);
-            
-            int result = ps.executeUpdate();            
-            
-            out.println("<html>");
-            out.println("<body>");
-            out.println("Information Updated! <a href=stateAdminDashboard.jsp > dashboard </a>");
-            out.println("</body>");
-            out.println("</html>");
-        }catch(Exception e){
-            out.println(e);
-        }
-    }
-
     @Override
     public void init(ServletConfig config) throws ServletException {
         try{
             con = myPkg.Utility.connectDB();
 
-            String sql = "INSERT INTO caseInfo(idate,state,total,active,deaths,userid) VALUES (now(),?,?,?,?,?)";
+            String sql = "SELECT * FROM caseInfo";
 
             ps = con.prepareStatement(sql);
         }catch(Exception e){
@@ -84,6 +42,44 @@ public class saveStateInfo extends HttpServlet {
         try{
             con.close();
         }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        
+        ResultSet rs;
+        
+        try (PrintWriter out = response.getWriter()) {
+            rs = ps.executeQuery();
+            
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<body>");
+            out.println("<h1>Data For All States</h1>");
+            out.println("<a href=stateAdminDashboard.jsp>Back</a>");
+            out.println("<hr>");
+            out.println("<table border=2>");
+            out.println("<tr>");
+              out.println("<th>Sno.</th><th>State</th><th>Date</th><th>Total</th><th>Active</th><th>Deaths</th>");
+            out.println("</tr>");
+            while(rs.next()){
+                String sno = rs.getString("sno");
+                String stateName = rs.getString("state");
+                String date = rs.getString("idate");
+                String total = rs.getString("total");
+                String active = rs.getString("active");
+                String deaths = rs.getString("deaths");
+                out.println("<tr>");
+                    out.println("<td>"+sno+"</td><td>"+stateName+"</td><td>"+date+"</td><td>"+total+"</td><td>"+active+"</td><td>"+deaths+"</td>");
+                out.println("</tr>");
+            }
+            out.println("</table>");            
+            out.println("</body>");
+            out.println("</html>");
+        }catch(SQLException e){
             e.printStackTrace();
         }
     }

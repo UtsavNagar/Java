@@ -5,7 +5,7 @@
         <form action="saveStateInfo" method="POST">
             <pre>
 
-            State      <select name="state" id="state">
+ <!--            State      <select name="state" id="state">
                         <option value="Andhra Pradesh">Andhra Pradesh</option>
                         <option value="Arunachal Pradesh">Arunachal Pradesh</option>
                         <option value="Assam">Assam</option>
@@ -45,7 +45,7 @@
                       </select>
 
 
-            Userid      <input type="text" name="userid" placeholder=""/>
+            Userid      <input type="text" name="userid" placeholder=""/>-->
 
             Total       <input type="text" name="total" placeholder=""/>
 
