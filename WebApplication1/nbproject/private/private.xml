@@ -5,6 +5,7 @@
         <group>
             <file>file:/home/utsav/Desktop/NetBeansProjects/WebApplication1/src/java/saveStateInfo.java</file>
             <file>file:/home/utsav/Desktop/NetBeansProjects/WebApplication1/web/userDashboard.jsp</file>
+            <file>file:/home/utsav/Desktop/NetBeansProjects/WebApplication1/web/WEB-INF/web.xml</file>
             <file>file:/home/utsav/Desktop/NetBeansProjects/WebApplication1/web/saveStateInfo.jsp</file>
             <file>file:/home/utsav/Desktop/NetBeansProjects/WebApplication1/web/stateAdminDashboard.jsp</file>
             <file>file:/home/utsav/Desktop/NetBeansProjects/WebApplication1/web/state-account.jsp</file>
@@ -13,6 +14,7 @@
             <file>file:/home/utsav/Desktop/NetBeansProjects/WebApplication1/src/java/VerifyUser.java</file>
             <file>file:/home/utsav/Desktop/NetBeansProjects/WebApplication1/src/java/StateAccountCreationServlet.java</file>
             <file>file:/home/utsav/Desktop/NetBeansProjects/WebApplication1/src/java/EndSession.java</file>
+            <file>file:/home/utsav/Desktop/NetBeansProjects/WebApplication1/web/customHome.jsp</file>
         </group>
     </open-files>
 </project-private>
