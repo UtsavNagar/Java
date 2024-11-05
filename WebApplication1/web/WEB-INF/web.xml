@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
-    
     <context-param>
         <param-name>param1</param-name>
         <param-value>context-param-1</param-value>
     </context-param>
-    
     <context-param>
         <param-name>param2</param-name>
         <param-value>context-param-2</param-value>
     </context-param>
-    
+    <listener>
+        <description>ServletContextListener</description>
+        <listener-class>myPkg.StartingHandler</listener-class>
+    </listener>
     <servlet>
         <servlet-name>DataProvider</servlet-name>
         <servlet-class>DataProvider</servlet-class>

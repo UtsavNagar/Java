@@ -4,6 +4,7 @@
  */
 
 import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletContext;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -69,7 +70,11 @@ public class saveStateInfo extends HttpServlet {
     @Override
     public void init(ServletConfig config) throws ServletException {
         try{
-            con = myPkg.Utility.connectDB();
+            //con = myPkg.Utility.connectDB();
+            
+            ServletContext cntx = getServletContext();
+            
+            con  =  (Connection) cntx.getAttribute("DB_CONNECTION");
 
             String sql = "INSERT INTO caseInfo(idate,state,total,active,deaths,userid) VALUES (now(),?,?,?,?,?)";
 
