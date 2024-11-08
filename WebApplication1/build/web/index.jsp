@@ -27,6 +27,7 @@
             </pre>
         </form>
         <hr>
+        <a href="helpline.jsp">Covid Helpline</a>
     </body>
 </html>
  

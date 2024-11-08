@@ -87,8 +87,7 @@ public class saveStateInfo extends HttpServlet {
     @Override
     public void destroy() {
         try{
-            con.close();
-        }catch(Exception e){
+         }catch(Exception e){
             e.printStackTrace();
         }
     }
