@@ -60,6 +60,8 @@ public class VerifyUser extends HttpServlet {
                 
                 boolean found = rs.next();
                 if(found){
+                    HttpSession session = request.getSession();
+                    session.setAttribute("userid", uid);
                     response.sendRedirect("userDashboard.jsp");
                 }else{
                     out.println("<html><body>");

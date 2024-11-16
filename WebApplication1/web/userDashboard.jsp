@@ -14,6 +14,7 @@
         <div>
             <hr>
             <h3>All links</h3>
+            <a href="showCases.jsp">Show Cases</a>
             <hr>
         </div>
     </body>
