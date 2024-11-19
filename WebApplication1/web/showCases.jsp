@@ -1,3 +1,11 @@
+<%@page import="java.sql.Connection , 
+                java.sql.PreparedStatement,
+                java.sql.ResultSet,
+                myPkg.Utility"
+        contentType="text/html"
+        errorPage="myErrorPage.jsp"
+ %>
+
 <%!
     int getPer(int deaths,int total){
         return deaths * 100 / total;
@@ -5,9 +13,9 @@
 %>
 <%
     String sql = "SELECT * FROM caseInfo";
-    java.sql.Connection con = myPkg.Utility.connectDB();
-    java.sql.PreparedStatement ps = con.prepareStatement(sql);
-    java.sql.ResultSet rs = ps.executeQuery();
+    Connection con = Utility.connectDB();
+    PreparedStatement ps = con.prepareStatement(sql);
+    ResultSet rs = ps.executeQuery();
     int srno = 1;
 %>
 <html>

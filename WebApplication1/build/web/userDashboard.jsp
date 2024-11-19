@@ -19,3 +19,5 @@
         </div>
     </body>
 </html>
+
+<%@include file="info.jsp" %>
