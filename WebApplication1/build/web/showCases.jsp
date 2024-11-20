@@ -1,3 +1,5 @@
+<%@taglib uri="/WEB-INF/tlds/myLIB.tld" prefix="myTag" %>
+
 <%@page import="java.sql.Connection , 
                 java.sql.PreparedStatement,
                 java.sql.ResultSet,
@@ -21,6 +23,7 @@
 <html>
     <body>
         <h3>Covid Data</h3>
+        <h4>Total Cases :- <myTag:totalCaseTagHandler/> </h4>
         <hr>
         <table border="2">
             <thead>
