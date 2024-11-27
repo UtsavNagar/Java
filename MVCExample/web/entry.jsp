@@ -2,15 +2,15 @@
     <body>
         <h1>Data-Entry</h1>
         <hr><!-- comment -->
-        <form>
+        <form action="MedicineSaveController" method="post">
             <pre>
-            code  : <input type="number" placeholder="123">
+            code  : <input name="code" type="number" placeholder="123">
 
-            name  : <input placeholder="">
+            name  : <input name="name" placeholder="">
 
-            Type  : <input placeholder="">
+            Type  : <input name="type" placeholder="">
 
-            price : <input type="number" placeholder="12">
+            price : <input name="price" type="number" placeholder="12">
 
                     <input type="submit">
             </pre>

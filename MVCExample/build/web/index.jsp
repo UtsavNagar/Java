@@ -8,7 +8,7 @@
         <hr>
         <pre>
         <a href="entry.jsp">Add-new-madicine</a>
-        <a href="search.jsp">Search-madicine</a>
+        <a href="searchMedicine.jsp">Search-madicine</a>
         <a href="delete.jsp">Delete-madicine</a>
         </pre>
         <hr>

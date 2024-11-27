@@ -9,13 +9,15 @@ import java.sql.ResultSet;
 // write crud operations 
 
 public class MedicineDAO {
-    public static Connection con;
+    public Connection con;
 
     public MedicineDAO() {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/coviddata","root","root");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/coviddata?useSSL=false&allowPublicKeyRetrieval=true", "root", "root");
+            System.out.println("DB Connected");
         }catch(Exception e){
+            System.out.println("--------------------------------------------------------------------------------------------");
             e.printStackTrace();
         }
     }
@@ -66,19 +68,20 @@ public class MedicineDAO {
     }
     
     public static void main(String[] args) throws SQLException {
-        /*Medicine med = new Medicine();
+        Medicine med = new Medicine();
         
         med.setCode(123);
         med.setName("xyz");
         med.setType("vit");
-        med.setPrice(50);*/
+        med.setPrice(50);
         
         MedicineDAO dao = new MedicineDAO();
+//        dao.saveMedicine(med);
 //        Medicine med = dao.searchMedicine(123);
-        dao.deleteMedicine(123);
+//        dao.deleteMedicine(123);
         
-        System.out.println("Deleted");
+        //System.out.println("Deleted");
         
-        con.close();
+//        con.close();
     }
 }
