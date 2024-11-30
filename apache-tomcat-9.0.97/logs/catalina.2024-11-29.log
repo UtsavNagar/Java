@@ -1,0 +1,92 @@
+29-Nov-2024 11:47:35.127 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.97
+29-Nov-2024 11:47:35.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 6 2024 19:55:19 UTC
+29-Nov-2024 11:47:35.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.97.0
+29-Nov-2024 11:47:35.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+29-Nov-2024 11:47:35.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.8.0-49-generic
+29-Nov-2024 11:47:35.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+29-Nov-2024 11:47:35.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk-amd64
+29-Nov-2024 11:47:35.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.13+11-Ubuntu-2ubuntu122.04
+29-Nov-2024 11:47:35.135 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Ubuntu
+29-Nov-2024 11:47:35.135 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/utsav/Desktop/NetBeansProjects/apache-tomcat-9.0.97
+29-Nov-2024 11:47:35.135 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/utsav/Desktop/NetBeansProjects/apache-tomcat-9.0.97
+29-Nov-2024 11:47:35.146 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+29-Nov-2024 11:47:35.147 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+29-Nov-2024 11:47:35.147 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+29-Nov-2024 11:47:35.147 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+29-Nov-2024 11:47:35.147 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+29-Nov-2024 11:47:35.147 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/utsav/Desktop/NetBeansProjects/apache-tomcat-9.0.97/conf/logging.properties
+29-Nov-2024 11:47:35.147 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+29-Nov-2024 11:47:35.147 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|utsav-HP-Laptop-15s-fq4xxx
+29-Nov-2024 11:47:35.147 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+29-Nov-2024 11:47:35.147 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+29-Nov-2024 11:47:35.147 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+29-Nov-2024 11:47:35.147 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+29-Nov-2024 11:47:35.147 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/utsav/Desktop/NetBeansProjects/apache-tomcat-9.0.97
+29-Nov-2024 11:47:35.148 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/utsav/Desktop/NetBeansProjects/apache-tomcat-9.0.97
+29-Nov-2024 11:47:35.148 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/utsav/Desktop/NetBeansProjects/apache-tomcat-9.0.97/temp
+29-Nov-2024 11:47:35.152 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+29-Nov-2024 11:47:35.354 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+29-Nov-2024 11:47:35.366 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [401] milliseconds
+29-Nov-2024 11:47:35.397 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+29-Nov-2024 11:47:35.397 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.97]
+29-Nov-2024 11:47:35.402 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/utsav/Desktop/NetBeansProjects/apache-tomcat-9.0.97/webapps/docs]
+29-Nov-2024 11:47:35.573 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/utsav/Desktop/NetBeansProjects/apache-tomcat-9.0.97/webapps/docs] has finished in [171] ms
+29-Nov-2024 11:47:35.573 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/utsav/Desktop/NetBeansProjects/apache-tomcat-9.0.97/webapps/ROOT]
+29-Nov-2024 11:47:35.584 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/utsav/Desktop/NetBeansProjects/apache-tomcat-9.0.97/webapps/ROOT] has finished in [11] ms
+29-Nov-2024 11:47:35.584 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/utsav/Desktop/NetBeansProjects/apache-tomcat-9.0.97/webapps/host-manager]
+29-Nov-2024 11:47:35.609 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/utsav/Desktop/NetBeansProjects/apache-tomcat-9.0.97/webapps/host-manager] has finished in [24] ms
+29-Nov-2024 11:47:35.609 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/utsav/Desktop/NetBeansProjects/apache-tomcat-9.0.97/webapps/manager]
+29-Nov-2024 11:47:35.624 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/utsav/Desktop/NetBeansProjects/apache-tomcat-9.0.97/webapps/manager] has finished in [15] ms
+29-Nov-2024 11:47:35.624 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/utsav/Desktop/NetBeansProjects/apache-tomcat-9.0.97/webapps/examples]
+29-Nov-2024 11:47:35.830 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/utsav/Desktop/NetBeansProjects/apache-tomcat-9.0.97/webapps/examples] has finished in [206] ms
+29-Nov-2024 11:47:35.832 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+29-Nov-2024 11:47:35.838 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [471] milliseconds
+29-Nov-2024 11:47:51.171 INFO [http-nio-8080-exec-9] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/utsav/Desktop/NetBeansProjects/apache-tomcat-9.0.97/conf/Catalina/localhost/FileUpload.xml]
+29-Nov-2024 11:47:51.172 WARNING [http-nio-8080-exec-9] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/FileUpload] in deployment descriptor [/home/utsav/Desktop/NetBeansProjects/apache-tomcat-9.0.97/conf/Catalina/localhost/FileUpload.xml] has been ignored
+29-Nov-2024 11:47:51.191 INFO [http-nio-8080-exec-9] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/utsav/Desktop/NetBeansProjects/apache-tomcat-9.0.97/conf/Catalina/localhost/FileUpload.xml] has finished in [20] ms
+29-Nov-2024 11:47:51.195 INFO [http-nio-8080-exec-10] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FileUpload]] after start() had already been called. The second call will be ignored.
+29-Nov-2024 11:53:17.619 INFO [http-nio-8080-exec-5] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] has started
+29-Nov-2024 11:53:17.668 INFO [http-nio-8080-exec-5] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] is completed
+29-Nov-2024 11:53:17.994 INFO [http-nio-8080-exec-6] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] has started
+29-Nov-2024 11:53:18.017 INFO [http-nio-8080-exec-6] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] is completed
+29-Nov-2024 11:53:27.955 INFO [http-nio-8080-exec-7] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] has started
+29-Nov-2024 11:53:27.987 INFO [http-nio-8080-exec-7] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] is completed
+29-Nov-2024 11:53:28.022 INFO [http-nio-8080-exec-3] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] has started
+29-Nov-2024 11:53:28.047 INFO [http-nio-8080-exec-3] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] is completed
+29-Nov-2024 11:53:28.109 INFO [http-nio-8080-exec-8] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] has started
+29-Nov-2024 11:53:28.128 INFO [http-nio-8080-exec-8] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] is completed
+29-Nov-2024 11:53:30.209 INFO [http-nio-8080-exec-6] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] has started
+29-Nov-2024 11:53:30.224 INFO [http-nio-8080-exec-6] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] is completed
+29-Nov-2024 12:03:00.981 INFO [http-nio-8080-exec-16] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] has started
+29-Nov-2024 12:03:01.002 INFO [http-nio-8080-exec-16] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] is completed
+29-Nov-2024 12:03:01.953 INFO [http-nio-8080-exec-15] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] has started
+29-Nov-2024 12:03:01.975 INFO [http-nio-8080-exec-15] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] is completed
+29-Nov-2024 12:03:55.739 INFO [http-nio-8080-exec-21] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] has started
+29-Nov-2024 12:03:55.757 INFO [http-nio-8080-exec-21] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] is completed
+29-Nov-2024 12:03:56.608 INFO [http-nio-8080-exec-25] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] has started
+29-Nov-2024 12:03:56.630 INFO [http-nio-8080-exec-25] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] is completed
+29-Nov-2024 12:03:56.708 INFO [http-nio-8080-exec-21] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] has started
+29-Nov-2024 12:03:56.727 INFO [http-nio-8080-exec-21] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] is completed
+29-Nov-2024 12:04:04.422 INFO [http-nio-8080-exec-19] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] has started
+29-Nov-2024 12:04:04.442 INFO [http-nio-8080-exec-19] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] is completed
+29-Nov-2024 12:04:05.350 INFO [http-nio-8080-exec-20] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] has started
+29-Nov-2024 12:04:05.365 INFO [http-nio-8080-exec-20] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] is completed
+29-Nov-2024 12:06:41.754 INFO [http-nio-8080-exec-19] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] has started
+29-Nov-2024 12:06:41.766 INFO [http-nio-8080-exec-19] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] is completed
+29-Nov-2024 12:10:45.863 INFO [http-nio-8080-exec-34] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] has started
+29-Nov-2024 12:10:45.874 INFO [http-nio-8080-exec-34] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] is completed
+29-Nov-2024 12:10:59.358 INFO [http-nio-8080-exec-35] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] has started
+29-Nov-2024 12:10:59.374 INFO [http-nio-8080-exec-35] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] is completed
+29-Nov-2024 12:10:59.688 INFO [http-nio-8080-exec-36] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] has started
+29-Nov-2024 12:10:59.700 INFO [http-nio-8080-exec-36] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] is completed
+29-Nov-2024 12:11:00.221 INFO [http-nio-8080-exec-19] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] has started
+29-Nov-2024 12:11:00.235 INFO [http-nio-8080-exec-19] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] is completed
+29-Nov-2024 12:11:05.565 INFO [http-nio-8080-exec-19] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] has started
+29-Nov-2024 12:11:05.577 INFO [http-nio-8080-exec-19] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] is completed
+29-Nov-2024 12:18:29.391 INFO [http-nio-8080-exec-42] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] has started
+29-Nov-2024 12:18:29.406 INFO [http-nio-8080-exec-42] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FileUpload] is completed
+29-Nov-2024 12:18:30.721 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+29-Nov-2024 12:18:30.722 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+29-Nov-2024 12:18:30.723 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+29-Nov-2024 12:18:30.731 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+29-Nov-2024 12:18:30.734 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
